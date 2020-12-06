@@ -12,7 +12,9 @@ logging.basicConfig(
 
 logger = logging.getLogger()
 
-
+PORT = int(os.environ.get('PORT','8443'))
+URL = "https://webhooksbots.herokuapp.com/"
+TOKEN ="1414314993:AAG-3ybEHFIH52KgfFsR0IpcuDF65YZ3JkA"
 
 def start(update, context):
    
@@ -44,10 +46,10 @@ def main():
     dp.add_handler(CommandHandler("help", help_command))
     dp.add_handler(CommandHandler('put', put))
 
+    updater.start_webhook(listen = "0.0.0.0",port=PORT,url_path=TOKEN)
 
-
-
-    updater.start_polling()
+    updater.start_webhook(URL+TOKEN)
+    
 
 
     updater.idle()
