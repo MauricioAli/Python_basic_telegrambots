@@ -1,5 +1,5 @@
-# Python_basic_telegrambots
+# Python_basic_telegrambots_webhooks
 
-Aqui encuentras mas ejemplos 
+Solo debes de crear un hosting en heroku y el reemplazarlo en la varible url y tambien reemplzar la variable token 
 
-https://github.com/python-telegram-bot/python-telegram-bot
+
