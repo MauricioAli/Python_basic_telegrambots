@@ -38,7 +38,7 @@ def put(update, context):
 def main():
     """Start the bot."""
 
-    updater = Updater("Aqui va tu token", use_context=True)
+    updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
 
    #Aqui configuras los comandos
